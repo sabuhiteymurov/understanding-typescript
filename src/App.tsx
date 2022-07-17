@@ -1,8 +1,10 @@
 import React from 'react';
 import Basics from './Basics';
+import CodeWars from './CodeWars';
 
 function App() {
   Basics();
+  CodeWars();
 
   return (
     <div className='App'>
