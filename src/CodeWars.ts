@@ -1,8 +1,8 @@
 const CodeWars = () => {
-  // Complementary DNA
   class Kata {
+    /*
     static dnaStrand(dna: string) {
-      //your code here
+      // Complementary DNA
       return dna
         .split('')
         .map((letter) => {
@@ -12,10 +12,24 @@ const CodeWars = () => {
             return letter === 'A' ? 'T' : 'A';
           return;
         })
-        .join('');
+        .join('');   
     }
+    */
+    /*
+    // Highest and Lowest
+    static highAndLow(numbers: string): string {
+      const numbersArray = numbers.split(' ');
+      let highest = Number(numbersArray[0]);
+      let lowest = Number(numbersArray[0]);
+      numbersArray.forEach((n) => {
+        let number = Number(n);
+        if (number > highest) highest = number;
+        if (number < lowest) lowest = number;
+      });
+      return `${highest.toString()} ${lowest.toString()}`;
+    }
+    */
   }
-  console.log(Kata.dnaStrand('CGAT'));
 };
 
 export default CodeWars;
