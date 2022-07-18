@@ -103,15 +103,15 @@ const Basics = () => {
   console.log('Learned the basics!');
 };
 
-class Person {
+abstract class Person {
   private employees: string[] = ['John', 'Leo'];
-  constructor(private name: string) {
+
+  constructor(protected readonly id: string, public name: string) {
     this.name = name;
   }
 
-  meet(this: Person) {
-    console.log('I am ' + this.name + ' Nice to meet you.');
-  }
+  abstract meet(this: Person): void;
+
   addEmployee(employee: string) {
     this.employees.push(employee);
   }
@@ -120,9 +120,33 @@ class Person {
   }
 }
 
-const SabuhiTeymurov = new Person('Sabuhi Teymurov.');
-SabuhiTeymurov.addEmployee('Anna');
-SabuhiTeymurov.printEmployees();
+class Student extends Person {
+  constructor(id: string, name: string) {
+    super(id, 'Student');
+  }
+
+  meet() {
+    console.log(this.id + '. I am ' + this.name + ' Nice to meet you.');
+  }
+}
+
+class Worker extends Person {
+  constructor(id: string, name: string) {
+    super(id, 'Student');
+  }
+  meet() {
+    console.log(this.id + '. I am ' + this.name + ' Nice to meet you.');
+  }
+}
+const worker = new Worker('w1', 'Worker');
+const student = new Student('s1', 'Student');
+
+worker.meet();
+student.meet();
+// const SabuhiTeymurov = new Person('ad1', 'Sabuhi Teymurov');
+// SabuhiTeymurov.meet();
+// SabuhiTeymurov.addEmployee('Anna');
+// SabuhiTeymurov.printEmployees();
 
 /*
 SabuhiTeymurov.meet();
