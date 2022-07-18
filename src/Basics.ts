@@ -103,4 +103,36 @@ const Basics = () => {
   console.log('Learned the basics!');
 };
 
+class Person {
+  private employees: string[] = ['John', 'Leo'];
+  constructor(private name: string) {
+    this.name = name;
+  }
+
+  meet(this: Person) {
+    console.log('I am ' + this.name + ' Nice to meet you.');
+  }
+  addEmployee(employee: string) {
+    this.employees.push(employee);
+  }
+  printEmployees() {
+    console.log(this.employees);
+  }
+}
+
+const SabuhiTeymurov = new Person('Sabuhi Teymurov.');
+SabuhiTeymurov.addEmployee('Anna');
+SabuhiTeymurov.printEmployees();
+
+/*
+SabuhiTeymurov.meet();
+
+const Person2 = {
+  name: 'Samir',
+  meet: SabuhiTeymurov.meet,
+};
+
+Person2.meet();
+*/
+
 export default Basics;
