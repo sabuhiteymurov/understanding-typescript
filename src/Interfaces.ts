@@ -6,13 +6,16 @@ export default interface Greetable {
 
 interface AddN {
   // Function interface
-  (a: number, b: number): number;
+  (a: number, b: number, name: string): number;
 }
 
-type AddFn = (a: number, b: number) => number; // Function type
+type AddFn = (n1: number, n2: number) => number; // Function type
 
 let add: AddFn;
 
+add = (n1: number) => {
+  return n1;
+};
 class Person implements Greetable {
   age = 30;
 
@@ -31,4 +34,4 @@ user1 = {
   },
 };
 
-user1.greet('Hi there, - I am');
+// user1.greet('Hi there, - I am');

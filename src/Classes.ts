@@ -36,8 +36,8 @@ class Worker extends Person {
 const worker = new Worker('w1', 'Worker');
 const student = new Student('s1', 'Student');
 
-worker.meet();
-student.meet();
+// worker.meet();
+// student.meet();
 // const SabuhiTeymurov = new Person('ad1', 'Sabuhi Teymurov');
 // SabuhiTeymurov.meet();
 // SabuhiTeymurov.addEmployee('Anna');
