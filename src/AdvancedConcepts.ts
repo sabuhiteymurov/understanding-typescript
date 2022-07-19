@@ -21,18 +21,20 @@ const e1: ElevatedEmployee = {
   startDate: new Date(),
 };
 
-type Combineable = string | number;
+type Combinable = string | number;
 type Numeric = number | boolean;
 
-type Universal = Combineable & Numeric; // types the union types have in common: number
+type Universal = Combinable & Numeric; // types the union types have in common: number
 
-// prettier-ignore
-const add = (a: Combineable, b: Combineable) => {
-  if (typeof a === 'string' || typeof b === 'string') { // This is a typeguard
+// Function Overloads
+function add(a: number, b: string): string;
+function add(a: Combinable, b: Combinable) {
+  if (typeof a === 'string' || typeof b === 'string') {
+    // This is a typeguard
     return a.toString() + b.toString();
   }
   return a + b;
-};
+}
 
 type UnkownEmployee = Employee | Admin;
 
@@ -90,3 +92,12 @@ const errorBag: ErrorContainer = {
   email: 'Not a valid email',
   username: 'Must start with a capital character',
 };
+
+// Optional Chaining
+const fetchedUserData = {
+  id: 'u1',
+  name: 'Sabuhi',
+  job: { title: 'Founder', description: 'My own company' },
+};
+
+console.log(fetchedUserData?.job?.title);
