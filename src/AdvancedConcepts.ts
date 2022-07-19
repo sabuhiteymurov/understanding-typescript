@@ -73,8 +73,20 @@ moveAnimal({ type: 'bird', flyingSpeed: 10 });
 
 // Type Casting
 // const userInputElement = <HTMLInputElement> document.getElementById('user-input')!; // Type Casting syntax 1
-const userInputElement = document.getElementById(
-  'user-input'
-)! as HTMLInputElement; // Type Casting syntax 2
 
-userInputElement.value = 'hello, there';
+// prettier-ignore
+const userInputElement = document.getElementById('user-input')! as HTMLInputElement; // Type Casting syntax 2
+if (userInputElement) {
+  userInputElement.value = 'Hi there';
+}
+// userInputElement.value = 'hello, there';
+
+// Index properties
+interface ErrorContainer {
+  [prop: string]: string;
+}
+
+const errorBag: ErrorContainer = {
+  email: 'Not a valid email',
+  username: 'Must start with a capital character',
+};

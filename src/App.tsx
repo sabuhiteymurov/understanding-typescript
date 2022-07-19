@@ -12,7 +12,7 @@ function App() {
   return (
     <div className='App'>
       <h1>Understanding TypeScript</h1>
-      <input type='text' id='user-input' />
+      <input type='text' id='user-input' placeholder='type here' />
     </div>
   );
 }
