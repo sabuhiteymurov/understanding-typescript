@@ -110,6 +110,19 @@ const HackerRank = () => {
     console.log(factorial.toString());
   }
   */
+  function timeConversion(s: string): string | number | undefined {
+    // Write your code here
+    if (s.includes('PM')) {
+      const hour = s.replace('PM', '');
+      return hour.slice(0, 2) === '12'
+        ? hour
+        : Number(hour.slice(0, 2)) + 12 + hour.slice(2);
+    } else {
+      const hour = s.replace('AM', '');
+      return hour.slice(0, 2) === '12' ? '00' + hour.slice(2) : hour;
+    }
+  }
+  console.log(timeConversion('12:59:45AM'));
   return <div>hackerRank</div>;
 };
 
