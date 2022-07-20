@@ -1,6 +1,7 @@
 import React from 'react';
 
 const HackerRank = () => {
+  // HackerRank Challenges
   /*
   function compareTriplets(a: number[], b: number[]):number[] {
     // Write your code here
@@ -10,6 +11,17 @@ const HackerRank = () => {
       else if (a[i] < b[i]) scores[1]++;
     }
     return scores;
+  }
+  */
+  /*
+  function birthdayCakeCandles(candles: number[]): number {
+    // Write your code here
+    let tallest = candles[0];
+    candles.forEach((c: number) => {
+      if (c > tallest) tallest = c;
+    });
+    const blowedCandles = candles.filter((c: number) => c === tallest);
+    return blowedCandles.length;
   }
   */
   /*
@@ -69,7 +81,35 @@ const HackerRank = () => {
     console.log('' + '#'.repeat(6));
   }
   */
-
+  /*
+  function miniMaxSum(arr: number[]): void {
+    // Write your code here
+    let max = arr[0];
+    let min = arr[0];
+    for (let i of arr) {
+      if (i < min) min = i;
+      if (i > max) max = i;
+    }
+    const sum = arr.reduce((a, b) => a + b, 0) - arr[0];
+    const sumMax = arr
+      .filter((n) => n !== min)
+      .reduce((previousValue, currentValue) => previousValue + currentValue, 0);
+    const sumMin = arr
+      .filter((n) => n !== max)
+      .reduce((previousValue, currentValue) => previousValue + currentValue, 0);
+    if (min === max) console.log(sum, sum);
+    else console.log(sumMin, sumMax);
+  }
+  */
+  /*
+  function extraLongFactorials(n: number): void {
+    let factorial = BigInt(1);
+    for (let i = n; i > 1; i--) {
+      factorial *= BigInt(i);
+    }
+    console.log(factorial.toString());
+  }
+  */
   return <div>hackerRank</div>;
 };
 
