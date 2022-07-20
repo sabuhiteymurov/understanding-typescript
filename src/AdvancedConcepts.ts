@@ -68,7 +68,7 @@ const moveAnimal = (animal: Animal) => {
       speed = animal.runningSpeed;
       break;
   }
-  console.log('Moving at speed: ' + speed);
+  // console.log('Moving at speed: ' + speed);
 };
 
 moveAnimal({ type: 'bird', flyingSpeed: 10 });
@@ -100,4 +100,11 @@ const fetchedUserData = {
   job: { title: 'Founder', description: 'My own company' },
 };
 
-console.log(fetchedUserData?.job?.title);
+// console.log(fetchedUserData?.job?.title);
+
+// Nullish Coalescing
+
+const userInput = null;
+
+// const storeData = userInput || 'DEFAULT' // Solution #1, returns '' as false
+const storeData = userInput ?? 'DEFAULT'; // Solution #2, nullish coalescing
