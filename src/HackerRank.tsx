@@ -124,6 +124,21 @@ const HackerRank = () => {
     }
   }
   */
+  /*
+  function gradingStudents(grades: number[]): number[] {
+    // Write your code here
+    const finalGrades = grades.map((g: number) => {
+      if (g < 38) return g;
+      else {
+        const remainder = 5 - (g % 5);
+        if (remainder > 2) return g;
+        else return g + remainder;
+      }
+    });
+
+    return finalGrades;
+  }
+  */
   return <div>hackerRank</div>;
 };
 
