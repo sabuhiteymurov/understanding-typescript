@@ -39,6 +39,7 @@ const Generics = () => {
   }
   */
 
+  /*
   // Generic Classes
   class DataStorage<T> {
     private data: T[] = [];
@@ -61,6 +62,30 @@ const Generics = () => {
   textStorage.addItem('Samir');
   textStorage.removeItem('Sabuhi');
   console.log(textStorage.getItems());
+
+  const numberStorage = new DataStorage<number>();
+  */
+  /*
+  // Generic utility types
+  interface CourseGoal {
+    title: string;
+    description: string;
+    completeUntil: Date;
+  };
+
+  const createCourseGoal = (title:string, description:string, date: Date):CourseGoal=>{
+    let courseGoal: Partial<CourseGoal> = {};
+    courseGoal.title = title;
+    courseGoal.description = description;
+    courseGoal.completeUntil = date;
+    return courseGoal as CourseGoal;
+  }
+
+  const names: Readonly<string[]> = ['Samir', 'Sabuhi'];
+  // names.push('Jonas');
+  // names.pop()
+  */
+
   return 'ON PAUSE';
 };
 
