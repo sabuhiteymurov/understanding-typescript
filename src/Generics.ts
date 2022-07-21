@@ -31,6 +31,36 @@ const Generics = () => {
   };
   console.log(countAndPrint([23, 523, 21]));
   */
+
+  /*
+  // 'keyof' constraint 
+  const extractAndConvert = <T extends object, U extends keyof T>(obj: T, key: U)=>{
+    return obj[key];
+  }
+  */
+
+  // Generic Classes
+  class DataStorage<T> {
+    private data: T[] = [];
+
+    addItem(item: T) {
+      this.data.push(item);
+    }
+
+    removeItem(item: T) {
+      this.data.splice(this.data.indexOf(item), 1);
+    }
+
+    getItems() {
+      return [...this.data];
+    }
+  }
+
+  const textStorage = new DataStorage<string>();
+  textStorage.addItem('Sabuhi');
+  textStorage.addItem('Samir');
+  textStorage.removeItem('Sabuhi');
+  console.log(textStorage.getItems());
   return 'ON PAUSE';
 };
 
