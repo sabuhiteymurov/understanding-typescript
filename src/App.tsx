@@ -5,10 +5,14 @@ import './Interfaces';
 import './AdvancedConcepts';
 import CodeWars from './CodeWars';
 import HackerRank from './HackerRank';
+import Generics from './Generics';
+import { JsIntermediate } from './JsIntermediate';
 
 export default function App() {
   Basics();
   CodeWars();
+  Generics();
+  JsIntermediate();
 
   return (
     <div className='App'>
