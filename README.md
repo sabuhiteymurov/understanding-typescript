@@ -1,3 +1,3 @@
-# Diving into TypeScript (in React)
+## Diving into TypeScript (in React)
 
-## CodeWars challenges with TypeScript
+### CodeWars && HackerRank challenges with TypeScript
