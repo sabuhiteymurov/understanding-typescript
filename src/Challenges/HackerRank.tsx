@@ -174,7 +174,7 @@ const HackerRank = () => {
   }
   */
 
-  return <div>hackerRank</div>;
+  return <div></div>;
 };
 
 export default HackerRank;

@@ -1,11 +1,11 @@
-import React from 'react';
-import Basics from './Basics';
-import './Classes';
-import './Interfaces';
-import './AdvancedConcepts';
-import CodeWars from './CodeWars';
-import HackerRank from './HackerRank';
-import Generics from './Generics';
+import Basics from './Concepts/Basics';
+import './Concepts/Classes';
+import './Concepts/Interfaces';
+import './Concepts/AdvancedConcepts';
+import CodeWars from './Challenges/CodeWars';
+import HackerRank from './Challenges/HackerRank';
+import Generics from './Concepts/Generics';
+import Todos from './Projects/simple-to-do/components/Todos';
 
 export default function App() {
   Basics();
@@ -14,9 +14,8 @@ export default function App() {
 
   return (
     <div className='App'>
-      <h1>Understanding TypeScript</h1>
+      <Todos />
       <HackerRank />
-      <input type='text' id='user-input' placeholder='type here' />
     </div>
   );
 }
