@@ -139,6 +139,33 @@ const HackerRank = () => {
     return finalGrades;
   }
   */
+  /*
+  function countApplesAndOranges(
+    s: number,
+    t: number,
+    a: number,
+    b: number,
+    apples: number[],
+    oranges: number[]
+  ): void {
+    // Write your code here
+    let appleScore = 0;
+    let orangeScore = 0;
+    apples.forEach((cor) => {
+      if (a + cor >= s && a + cor <= t) {
+        appleScore++;
+      }
+    });
+    oranges.forEach((cor) => {
+      if (b + cor >= s && b + cor <= t) {
+        orangeScore++;
+      }
+    });
+    console.log(appleScore);
+    console.log(orangeScore);
+  }
+  */
+
   return <div>hackerRank</div>;
 };
 
