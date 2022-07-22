@@ -165,6 +165,14 @@ const HackerRank = () => {
     console.log(orangeScore);
   }
   */
+  /*
+  function kangaroo(x1: number, v1: number, x2: number, v2: number): string {
+    // Write your code here
+    if(v1 < v2) return 'NO';
+    else if((x2-x1) % (v1-v2)===0)return 'YES';
+    return 'NO'
+  }
+  */
 
   return <div>hackerRank</div>;
 };
