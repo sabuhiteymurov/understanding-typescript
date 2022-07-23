@@ -1,15 +1,14 @@
 import TodoContent from '../models/todoContent';
 import Todo from './Todo';
 
-const Todos: React.FC = () => {
-  const todos = [
-    new TodoContent('Learn React', new Date().getTime()),
-    new TodoContent('Learn TypeScript', new Date().getTime()),
-  ];
+const Todos: React.FC<{
+  todos: TodoContent[];
+  setTodos: React.Dispatch<React.SetStateAction<TodoContent[]>>;
+}> = ({ todos, setTodos }) => {
   return (
-    <ul>
+    <ul className='todos'>
       {todos.map((item) => (
-        <Todo key={item.id} {...item} />
+        <Todo key={item.id} {...item} setTodos={setTodos} listId={item.id} />
       ))}
     </ul>
   );
