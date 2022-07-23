@@ -173,6 +173,22 @@ const HackerRank = () => {
     return 'NO'
   }
   */
+  /*
+  const pickingNumbers = (a: number[]): number => {
+    let result: number[] = [];
+
+    a.forEach((n) => (result[n] = (result[n] || 0) + 1));
+
+    let max = Number.NEGATIVE_INFINITY;
+
+    result.forEach((n, i) => {
+      const finalMax = n + (result[i + 1] || 0);
+      if (finalMax > max) max = finalMax;
+    });
+
+    return max;
+  };
+  */
 
   return <div></div>;
 };

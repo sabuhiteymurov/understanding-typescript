@@ -6,6 +6,7 @@ import CodeWars from './Challenges/CodeWars';
 import HackerRank from './Challenges/HackerRank';
 import Generics from './Concepts/Generics';
 import Todos from './Projects/simple-to-do/components/Todos';
+import NewTodo from './Projects/simple-to-do/components/NewTodo';
 
 export default function App() {
   Basics();
@@ -14,6 +15,7 @@ export default function App() {
 
   return (
     <div className='App'>
+      <NewTodo />
       <Todos />
       <HackerRank />
     </div>
