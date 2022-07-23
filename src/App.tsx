@@ -27,10 +27,18 @@ export default function App() {
     });
   };
 
+  const handleRemoveClick = (listId: number) => {
+    setTodos((prevTodos) => {
+      return prevTodos.filter((todo) => {
+        return todo.id !== listId;
+      });
+    });
+  };
+
   return (
     <div className='App'>
       <NewTodo addTodo={addTodo} />
-      <Todos todos={todos} setTodos={setTodos} />
+      <Todos todos={todos} handleRemoveClick={handleRemoveClick} />
       <HackerRank />
     </div>
   );

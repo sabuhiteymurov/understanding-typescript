@@ -3,12 +3,17 @@ import Todo from './Todo';
 
 const Todos: React.FC<{
   todos: TodoContent[];
-  setTodos: React.Dispatch<React.SetStateAction<TodoContent[]>>;
-}> = ({ todos, setTodos }) => {
+  handleRemoveClick: (listId: number) => void;
+}> = ({ todos, handleRemoveClick }) => {
   return (
     <ul className='todos'>
       {todos.map((item) => (
-        <Todo key={item.id} {...item} setTodos={setTodos} listId={item.id} />
+        <Todo
+          key={item.id}
+          {...item}
+          listId={item.id}
+          handleRemoveClick={handleRemoveClick}
+        />
       ))}
     </ul>
   );
