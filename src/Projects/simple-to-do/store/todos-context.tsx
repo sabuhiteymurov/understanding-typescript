@@ -18,7 +18,7 @@ export const TodosContext = React.createContext<{
   removeTodo: (id: number) => {},
 });
 
-// Children property on React component not exist solution:
+// Children property on React component does not exist solution:
 const TodosContextProvider: React.FC<{ children: ReactNode }> = (props) => {
   const [todos, setTodos] = useState<TodoContent[]>([]);
 
