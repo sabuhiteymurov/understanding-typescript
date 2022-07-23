@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import TodoContent from '../models/todoContent';
+import { ReactNode } from 'react';
 
 type TodosContextObj = {
   items: TodoContent[];
@@ -18,11 +19,7 @@ export const TodosContext = React.createContext<{
 });
 
 // Children property on React component not exist solution:
-type Props = {
-  children?: React.ReactChild | React.ReactChild[];
-};
-
-const TodosContextProvider: React.FC = (props: Props) => {
+const TodosContextProvider: React.FC<{ children: ReactNode }> = (props) => {
   const [todos, setTodos] = useState<TodoContent[]>([]);
 
   const addTodo = (text: string): void => {

@@ -7,6 +7,7 @@ import HackerRank from './Challenges/HackerRank';
 import Generics from './Concepts/Generics';
 import Todos from './Projects/simple-to-do/components/Todos';
 import NewTodo from './Projects/simple-to-do/components/NewTodo';
+import TodosContextProvider from './Projects/simple-to-do/store/todos-context';
 
 export default function App() {
   Basics();
@@ -14,10 +15,10 @@ export default function App() {
   Generics();
 
   return (
-    <div className='App'>
+    <TodosContextProvider>
       <NewTodo />
       <Todos />
       <HackerRank />
-    </div>
+    </TodosContextProvider>
   );
 }
